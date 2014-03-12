@@ -9,6 +9,10 @@ var base_url = l.protocol + "//" + l.host + "/" + l.pathname.split('/')[1];
 	$j('.menu-principal-container>ul#menu-principal li#menu-item-24').after($logo);
 	// ---------------------------------------- //
 
+
+$j( "h1.product_title.entry-title" ).after( "<?php if(function_exists('social_ring_show')){ social_ring_show();} ?>" );
+
+
 $j( "dl.gallery-item dt.gallery-icon a" ).append( "<div class='baixar'>BAIXAR IMAGEM</div>" );
 
 
