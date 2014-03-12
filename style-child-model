@@ -1,0 +1,10 @@
+/*
+Theme Name:     XXX
+Description:   	Child Theme Twenty Thirteen
+Author:         ART2wEB
+Author URI:     http://www.art2web.com.br
+Template:       twentythirteen
+*/
+
+@import url("../twentythirteen/style.css");
+/*=============================================================================================================*/
