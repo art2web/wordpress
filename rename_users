@@ -1,0 +1,16 @@
+
+<?php
+function change_role_name() {
+    global $wp_roles;
+    if ( ! isset( $wp_roles ) )
+        $wp_roles = new WP_Roles();
+    //You can use any of the roles "administrator" "editor", "author", "contributor" or "subscriber"...
+    $wp_roles->roles['editor']['name'] = 'Manager';
+    $wp_roles->role_names['editor'] = 'Manager';
+    $wp_roles->roles['author']['name'] = 'PremiumMember';
+    $wp_roles->role_names['author'] = 'PremiumMember';  
+    $wp_roles->roles['contributor']['name'] = 'FreeMember';
+    $wp_roles->role_names['contributor'] = 'FreeMember';  
+}
+add_action('init', 'change_role_name');
+?>
