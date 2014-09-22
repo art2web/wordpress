@@ -1,0 +1,14 @@
+/*Em functions.php*/
+
+/* =================================================================================================== */
+/** Admin Slug Function */
+function the_slug() {
+    $post_data = get_post($post->ID, ARRAY_A);
+    $slug = $post_data['post_name'];
+    return $slug; 
+}
+/* =================================================================================================== */
+
+
+/*Em header.php*/
+		<body <?php body_class(); echo 'id="' . the_slug() . '"'; ?>>
