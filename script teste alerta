@@ -1,5 +1,5 @@
 ?>
 <script>
-//alert('RESTRITO');
+alert('PASSEI AQUI 1!');
 </script>
 <?php
