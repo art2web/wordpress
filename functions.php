@@ -15,6 +15,8 @@ function my_init() {
 		wp_register_script('custom', get_stylesheet_directory_uri().'/js/custom.js', array('jquery'), false, false);
         wp_enqueue_script( 'custom' );
 
+	wp_enqueue_style( 'responsive', get_stylesheet_directory_uri() . '/responsive.css' );
+
 	}
 }
 add_action('init', 'my_init');
