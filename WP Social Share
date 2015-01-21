@@ -1,0 +1,3 @@
+		<?php 
+            echo do_shortcode('[wp_social_sharing facebook_text="Compartilhar no Facebook" twitter_text="Compartilhar no Twitter" googleplus_text="Compartilhar no Google+" social_options="facebook,twitter,googleplus"]'); 
+        ?>	
