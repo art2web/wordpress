@@ -1,0 +1,8 @@
+  $current_user = wp_get_current_user();
+	if ($current_user->user_login != 'art2web') {
+	  echo '<style>
+				#toplevel_page_edit-post_type-acf {
+					display: none !important;
+				}
+	  </style>';
+	}
