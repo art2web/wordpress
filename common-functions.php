@@ -36,6 +36,19 @@ function register_jquery() {
     wp_enqueue_script( 'jquery' );
 }
 
+/* =================================================================================================== */
+function re_rewrite_rules() {
+    global $wp_rewrite;
+    // $wp_rewrite->author_base = $author_slug;
+//  print_r($wp_rewrite);
+    $wp_rewrite->author_base        = 'autor';
+    $wp_rewrite->search_base        = 'buscar';
+    $wp_rewrite->comments_base      = 'comentarios';
+    $wp_rewrite->pagination_base    = 'pagina';
+    $wp_rewrite->flush_rules();
+}
+add_action('init', 're_rewrite_rules');
+/* =================================================================================================== */
 
 
 
