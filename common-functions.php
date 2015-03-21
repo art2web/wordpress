@@ -28,6 +28,18 @@ function cloneRole()
 
 /* =================================================================================================== */
 
+/* =================================================================================================== */
+add_action('init', 'cloneRole');
+function cloneRole()
+{
+    global $wp_roles;
+    if ( ! isset( $wp_roles ) )
+        $wp_roles = new WP_Roles();
+    $adm = $wp_roles->get_role('administrator');
+    //Adding a 'new_role' with all admin caps
+    $wp_roles->add_role('cliente', 'Cliente', $adm->capabilities);
+}
+/* =================================================================================================== */
 
 
 add_action( 'wp_enqueue_scripts', 'register_jquery' );
