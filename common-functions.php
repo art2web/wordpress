@@ -9,6 +9,19 @@ function the_slug() {
 }
 /* =================================================================================================== */
 
+/* =================================================================================================== */
+function the_slug_by_permalink($echo=true){
+  $slug = basename(get_permalink());
+  do_action('before_slug', $slug);
+  $slug = apply_filters('slug_filter', $slug);
+  if( $echo ) echo $slug;
+  do_action('after_slug', $slug);
+  return $slug;
+}
+/* =================================================================================================== */
+
+
+
 add_action('init', 'cloneRole');
 function cloneRole()
 {
