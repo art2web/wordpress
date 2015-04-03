@@ -1,0 +1,5 @@
+
+$("section nav a").on("click", function (event) {
+	event.preventDefault();
+	$(".content").fadeOut("slow").load('../terapia-de-casal.php').fadeIn('slow');
+});
