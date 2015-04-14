@@ -1,11 +1,11 @@
 .saiba-mais, .entry-title, .entry-thumbnail {
-	-webkit-transition: all 0.9s ease-out;
-	-moz-transition: all 0.9s ease-out;
-	-ms-transition: all 0.9s ease-out;
-	-o-transition: all 0.9s ease-out;
-	transition: all 0.9s ease-out;
-	-webkit-animation: bounceIn_custom 0.7s ease-in-out;
-	-moz-animation: bounceIn_custom 0.7s ease-in-out;
-	-o-animation: bounceIn_custom 0.7s ease-in-out;
-	animation: bounceIn_custom 0.7s ease-in-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	-webkit-animation: bounceIn_custom 0.5s ease-in-out;
+	-moz-animation: bounceIn_custom 0.5s ease-in-out;
+	-o-animation: bounceIn_custom 0.5s ease-in-out;
+	animation: bounceIn_custom 0.5s ease-in-out;
 }
