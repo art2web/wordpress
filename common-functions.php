@@ -76,6 +76,14 @@ function re_rewrite_rules() {
 add_action('init', 're_rewrite_rules');
 /* =================================================================================================== */
 
+function art2web_remove_post_type_support() {
+    remove_post_type_support( 'portfolio', 'editor' );
+}
+add_action( 'init', 'art2web_remove_post_type_support' );
+
+/* =================================================================================================== */
+
+
 
 
 ?>
