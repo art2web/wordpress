@@ -83,6 +83,16 @@ add_action( 'init', 'art2web_remove_post_type_support' );
 
 /* =================================================================================================== */
 
+/* =================================================================================================== */
+function remove_core_updates(){
+	if (!is_admin()) {
+		global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+	}
+}
+add_filter('pre_site_transient_update_core','remove_core_updates');
+add_filter('pre_site_transient_update_plugins','remove_core_updates');
+add_filter('pre_site_transient_update_themes','remove_core_updates');
+/* =================================================================================================== */
 
 
 
