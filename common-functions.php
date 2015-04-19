@@ -94,6 +94,42 @@ add_filter('pre_site_transient_update_plugins','remove_core_updates');
 add_filter('pre_site_transient_update_themes','remove_core_updates');
 /* =================================================================================================== */
 
+/* =================================================================================================== */
+// Add and remove dashboard widgets
+function art2web_dashboard_cleanup() {
+
+	//* remove meta boxes
+//	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_secondary', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+
+	//* add call to include a custom widget
+	wp_add_dashboard_widget( 'art2web_help_text', 'Ajuda e Suporte do Website', 'art2web_help_links' ); // add a new custom widget for help and support
+}
+
+add_action( 'wp_dashboard_setup', 'art2web_dashboard_cleanup' );
+
+//* add custom help links
+function art2web_help_links() {
+	?>
+
+	<img src="http://www.art2web.com.br/art2web-dashboard.png" />
+
+	<p>Se tiver alguma dúvida ou sugestão, entre em contato.</p>
+
+	<ul>
+		<li>Art2web Studio: <a href="http://www.art2web.com.br/" target="new" title="Acesse Art2web Studio">www.art2web.com.br</a></li>
+	</ul>
+
+<?php
+}
+/* =================================================================================================== */
+/* =================================================================================================== */
 
 
 ?>
