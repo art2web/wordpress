@@ -1,0 +1,16 @@
+/**** Sidebar Produtos ***** */
+function wpb_widgets_init() {
+
+if ( function_exists('register_sidebar') )
+    register_sidebar( array(
+   'name' => __( 'Produtos'),
+   'id' => 'custom-widget',
+   'description' => "",
+   'before_widget' => '<div id="%1$s">',
+   'after_widget' => "</div>",
+   'before_title' => '<h3 class="widget-title">',
+   'after_title' => '</h3>',
+   ) );
+    }
+add_action( 'widgets_init', 'wpb_widgets_init' );
+/**** Sidebar Footer #4 ***** */
